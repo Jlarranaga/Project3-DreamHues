@@ -12,9 +12,9 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.detail import DetailView
 
-from . models import Dream, DreamForm, Photo
+from .models import Dream, DreamForm, Photo
 
-from utils import get_imgix_palette 
+from .utils import get_imgix_palette 
 
 import requests
 import json
