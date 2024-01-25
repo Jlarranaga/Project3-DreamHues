@@ -20,7 +20,7 @@ env = environ.Env(
     # set casting, default value
     DEBUG=(bool, False)
 )
-environ.Env.read_env()
+environ.Env.read_env() 
 
 GOOGLE_CLIENT_ID = env.str("GOOGLE_CLIENT_ID")
 GOOGLE_CLIENT_SECRET = env.str("GOOGLE_CLIENT_SECRET")
