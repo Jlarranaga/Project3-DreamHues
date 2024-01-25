@@ -7,7 +7,7 @@ pip install psycopg2
 pip install boto3
 pip install whitenoise
 pip install gunicorn
-pip install get_imgix_palette
+
 
 pip install -r ./requirements.txt
 
