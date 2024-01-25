@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 # import environ
 from pathlib import Path
-# import dj_database_url
+import dj_database_url
 import environ
 import os
 
@@ -20,7 +20,7 @@ env = environ.Env(
     # set casting, default value
     DEBUG=(bool, False)
 )
-# environ.Env.read_env() 
+environ.Env.read_env() 
 
 GOOGLE_CLIENT_ID = env.str("GOOGLE_CLIENT_ID")
 GOOGLE_CLIENT_SECRET = env.str("GOOGLE_CLIENT_SECRET")
@@ -107,6 +107,7 @@ WSGI_APPLICATION = 'Project3DreamHues.wsgi.application'
 
 DATABASES = {
     'default': {
+        'default': dj_database_url.config(default='postgresql://postgres:postgres@localhost:5432/dreamhuesdb',conn_max_age=600),
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': env('NEON_NAME'),
         'USER': env('NEON_USER'),
